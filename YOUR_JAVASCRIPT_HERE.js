@@ -18,7 +18,13 @@ return hero
 }
 
 const image = document.getElementById("inn");
-image.innerHTML
+image.onclick = function () {
+    if (hero.health === 8)
+    return hero.health = 10
+}
+
+object.onclick = function(){myScript};
+
 
 function pickUpItem() {}
 function equipWeapon() {}
