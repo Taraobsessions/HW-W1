@@ -40,5 +40,13 @@ daggerimage.onclick = function () {
 }
 
 function equipWeapon(hero) {
-    hero.inventory
+    if (hero.inventory.length === 0){
+    return 
+} else {
+    hero.weapon = hero.inventory[0]
+    }
+}
+const bagimage = document.getElementById('bag');
+bagimage.onclick = function () {
+    equipWeapon(hero)
 }
