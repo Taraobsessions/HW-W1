@@ -4,7 +4,7 @@ const hero = {
     inventory: [],
     health: 10,
     weapon: {
-        type: 'fists',
+        type: '',
         damage: 2,
     }
 }
@@ -23,8 +23,22 @@ image.onclick = function () {
     return hero.health = 10
 }
 
-object.onclick = function(){myScript};
 
+function pickUpItem(hero, weapon) {
+    if (weapon)
+    return hero.inventory.push(weapon)
+}
 
-function pickUpItem() {}
-function equipWeapon() {}
+const daggerimage = document.getElementById('dagger');
+daggerimage.onclick = function () {
+    let dagger = {
+        type: 'dagger',
+        damage: 2,
+    }
+    pickUpItem(hero, dagger)
+    
+}
+
+function equipWeapon(hero) {
+    hero.inventory
+}
